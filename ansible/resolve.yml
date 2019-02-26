@@ -1,0 +1,10 @@
+---
+- hosts: mining
+  remote_user: rtrade
+  become: true
+  tasks:
+    - name: fix intermittent resolve issues
+      copy:
+        src: files/resolv.conf
+        dst: /etc/resolv.conf
+        mode: 0777
