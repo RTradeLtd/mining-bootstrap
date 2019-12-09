@@ -1,0 +1,22 @@
+---
+    - hosts: mining
+      remote_user: rtrade
+      become: true
+      tasks:
+        - name: copy restarter script
+          copy:
+            src: files/miner_watcher.sh
+            dest: /boot_scripts/miner_watcher.sh
+            mode: 0641
+        - name: copy systemd service
+          copy:
+            src: files/miner_watcher.service
+            dest: /etc/systemd/system/miner_watcher.service
+            mode: 0641
+        - name: restart miner watcher service, reload the configuration, and enable
+          systemd:
+            state: started
+            daemon_reload: yes
+            enabled: true
+            name: miner_watcher
+            

@@ -1,0 +1,13 @@
+[Unit]
+Description=Watches the miner service
+After=miner.service
+
+[Service]
+User=root
+Group=root
+Type=simple
+PIDFile=/var/run/miner_watcher.pid
+ExecStart=/boot_scripts/miner_watcher.sh
+
+[Install]
+WantedBy=multi-user.target
