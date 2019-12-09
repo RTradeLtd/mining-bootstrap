@@ -4,10 +4,10 @@ Here you can find scripts for managing linux mining rigs running on Ubuntu. We u
 
 ## Contents
 
-* `ethminer_start.sh` is used to start the ethminer software
-* `ethminer_stats.sh` is used to pull stats from the ethminer api
-* `nvidia_smi_parser.sh` is used to parse `nvidia-smi` output and retrieve common stats
-* `nvidia_temperature_watcher.sh` a configurable thermostat for your GPUs
+* `ethminer/ethminer_start.sh` is used to start the ethminer software
+* `ethminer/ethminer_stats.sh` is used to pull stats from the ethminer api
+* `nvidia/nvidia_smi_parser.sh` is used to parse `nvidia-smi` output and retrieve common stats
+* `nvidia/nvidia_temperature_watcher.sh` a configurable thermostat for your GPUs
 
 ### Ubuntu 18.04
 
