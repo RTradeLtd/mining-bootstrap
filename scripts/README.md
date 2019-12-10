@@ -4,10 +4,14 @@ Here you can find scripts for managing linux mining rigs running on Ubuntu. We u
 
 ## Contents
 
+
 * `ethminer/ethminer_start.sh` is used to start the ethminer software
 * `ethminer/ethminer_stats.sh` is used to pull stats from the ethminer api
+* `miner/miner_watcher.sh` is used to ensure the miner service never stalls
 * `nvidia/nvidia_smi_parser.sh` is used to parse `nvidia-smi` output and retrieve common stats
 * `nvidia/nvidia_temperature_watcher.sh` a configurable thermostat for your GPUs
+* `misc/ip_gen.sh` is used to generate ip ranges in /24 networks
+* `misc/live_hosts.sh` is used to generate a list of hosts online in a network and a clusterssh script to access all of them
 
 ### Ubuntu 18.04
 

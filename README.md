@@ -1,6 +1,14 @@
 # Mining Bootstrap [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FRTradeLtd%2Fmining-bootstrap.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FRTradeLtd%2Fmining-bootstrap?ref=badge_shield)
 
-In this repository you'll find a collection of docs, scripts, and various programs designed to assist mining farm operators.
+This repository contains a collection of scripts, systemd services, and generalized tooling for running a mining farm operation at scale. Additionally it includes a handy tool for generating earning reports for your farm on a select list of mining pools.
+
+
+## ansible
+
+Contains ansible playbooks useful for automating common mining farm tasks.
+
+* `miner_watcher.yml` is used to copy our miner service watcher to our hosts
+* `resolve.yml` is used to overwrite the systems `/etc/resolve.conf` file
 
 ## earnings-report
 
