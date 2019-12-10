@@ -1,0 +1,17 @@
+---
+    - hosts: mining
+      remote_user: rtrade
+      become: true
+      tasks:
+        - name: runs apt-get update
+          apt:
+            update_cache: yes
+        - name: upgrade all packages to latest version
+          apt:
+            upgrade: dist
+        - name: remove useless packages from cache
+          apt:
+            autoclean: yes
+        - name: remove dependencies that are no longer needed
+          apt:
+            autoremove: yes

@@ -7,6 +7,7 @@ This repository contains a collection of scripts, systemd services, and generali
 
 Contains ansible playbooks useful for automating common mining farm tasks.
 
+* `miner_update.yml` is used to perform routine update tasks against miners
 * `miner_watcher.yml` is used to copy our miner service watcher to our hosts
 * `resolve.yml` is used to overwrite the systems `/etc/resolve.conf` file
 
