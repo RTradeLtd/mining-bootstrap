@@ -16,6 +16,11 @@ while true; do
         sudo systemctl restart miner
     fi
 
+    echo "[INFO] checking nvidia driver status"
+    OUT=$(nvidia-smi | grep -c "Unable to determine")
+    # if this is true then it means the driver crashed and we need to reboot the system
+    if [[ "$OUT" -gt 0 ]]; then
+        sudo reboot now
+    fi
     sleep 30
 done
-
