@@ -22,6 +22,15 @@ while true; do
     if [[ "$OUT" != "0" ]]; then
         sudo reboot now
     fi
+
+    echo "[INFO] checking nvidia driver mismatch"
+    OUT=$(nvidia-smi | grep -c "Failed to initialize")
+    # if this is true then it means that we have some weirdness with the nvidia driver
+    # trigger an update and system reboot
+    if [[ "$OUT" != "0" ]]; then
+        sudo apt update -y && sudo apt upgrade -y
+        sudo reboot now
+    f
     
     sleep 30
 done
