@@ -30,7 +30,7 @@ while true; do
     if [[ "$OUT" != "0" ]]; then
         sudo apt update -y && sudo apt upgrade -y
         sudo reboot now
-    f
+    fi
     
     sleep 30
 done
